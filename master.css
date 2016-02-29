@@ -1,7 +1,7 @@
 body {
-  background: linear-gradient(45deg, #3F5E5A, 60%, #F4F0F5) no-repeat;
+  background: linear-gradient(45deg, #3F5E5A, 60%, #F4F0F5);
   font-family: 'Source Code Pro';
-  min-height: 900px;
+  min-height: 870px;
 }
 
 .container {
@@ -64,7 +64,7 @@ body {
 }
 .card .right-section .upper .photo-title {
   text-align: center;
-  font-size: 2.5vmin;
+  font-size: 1.6em;
   color: #FFFBCF;
 }
 .card .right-section .lower {
