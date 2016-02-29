@@ -1,6 +1,7 @@
 body {
-  background-color: #073B4C;
+  background: linear-gradient(45deg, #3F5E5A, 60%, #F4F0F5) no-repeat;
   font-family: 'Source Code Pro';
+  min-height: 900px;
 }
 .container {
   margin: 30px;
@@ -27,11 +28,21 @@ body {
   justify-content: flex-start;
   box-shadow: 1px 0px 5px #111111;
   z-index: 2;
-  color: #F4F0F5;
+  background-color: #2D2D2A;
+  color: #3F5E5A;
 }
-.card .right-section .photo {
+.card .right-section .upper {
   -webkit-flex: 1;
   flex: 1;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  margin-top: 5px;
+}
+.card .right-section .upper .photo {
   background-color: white;
   width: 200px;
   height: 200px;
@@ -43,20 +54,83 @@ body {
   margin: 0.5em;
   margin-left: 50px;
 }
-.card .right-section .photo-title {
+.card .right-section .upper .photo-title {
   text-align: center;
   font-size: 1.2em;
   color: #FFFBCF;
 }
-.card .right-section .block {
+.card .right-section .lower {
+  -webkit-flex: 2;
+  flex: 2;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  background-color: #38423B;
+}
+.card .right-section .lower .block-about {
+  -webkit-flex: 2;
+  flex: 2;
+  margin: 10px;
+}
+.card .right-section .lower .block-about .description-title {
+  font-size: 1.2em;
+  font-style: italic;
+  text-align: center;
+  color: #FFFCF9;
+}
+.card .right-section .lower .block-about .description {
+  font-size: 0.9em;
+  color: #FFFCF9;
+}
+.card .right-section .lower .block-contact {
   -webkit-flex: 1;
   flex: 1;
   margin: 10px;
-  text-align: center;
 }
-.card .right-section .block .description-title {
-    font-size: 1.2em;
-    font-style: italic;
+.card .right-section .lower .block-contact .description-title {
+  font-size: 1.2em;
+  font-style: italic;
+  text-align: center;
+  color: #FFFCF9;
+}
+.card .right-section .lower .block-contact ul {
+  list-style-type: none;
+  color: #FFFCF9;
+  padding-left: 0;
+  margin: 0;
+  margin-top: 3px;
+}
+.card .right-section .lower .block-contact ul .icon-circle {
+  color: #EEF8FF;
+}
+.card .right-section .lower .block-contact a {
+  text-decoration: none;
+  color: #FFFCF9;
+  transition: all .2s ease;
+}
+.card .right-section .lower .block-contact a:hover {
+  color: #20FC8F;
+}
+.card .right-section .lower .block-contact .icon-stack {
+  color: #3F5E5A;
+}
+.card .right-section .lower .block-skill {
+  -webkit-flex: 3;
+  flex: 3;
+  margin: 10px;
+}
+.card .right-section .lower .block-skill .description-title {
+  font-size: 1.2em;
+  font-style: italic;
+  text-align: center;
+  color: #FFFCF9;
+}
+.card .right-section .lower .block-skill .description {
+  font-size: 0.9em;
+  color: #FFFCF9;
 }
 .card .left-section {
   background-color: #F4F0F5;
