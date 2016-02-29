@@ -44,19 +44,23 @@ body {
 }
 .card .right-section .upper .photo {
   background-color: white;
-  width: 200px;
-  height: 200px;
+  width: 100%;
+  height: auto;
+  min-width: 100px;
+  min-height: auto;
+  max-width: 200px;
+  max-height: 200px;
   border-radius: 1000px;
   z-index: 3;
   box-shadow: 0px 0px 10px #060E0C;
   border-color: #F4F0F5;
   border: 1px solid;
   margin: 0.5em;
-  margin-left: 50px;
+  margin-left: 7%;
 }
 .card .right-section .upper .photo-title {
   text-align: center;
-  font-size: 1.2em;
+  font-size: 2.5vmin;
   color: #FFFBCF;
 }
 .card .right-section .lower {
@@ -76,13 +80,13 @@ body {
   margin: 10px;
 }
 .card .right-section .lower .block-about .description-title {
-  font-size: 1.2em;
+  font-size: 1em;
   font-style: italic;
   text-align: center;
   color: #FFFCF9;
 }
 .card .right-section .lower .block-about .description {
-  font-size: 0.9em;
+  font-size: 0.6em;
   color: #FFFCF9;
 }
 .card .right-section .lower .block-contact {
@@ -91,7 +95,7 @@ body {
   margin: 10px;
 }
 .card .right-section .lower .block-contact .description-title {
-  font-size: 1.2em;
+  font-size: 1em;
   font-style: italic;
   text-align: center;
   color: #FFFCF9;
@@ -102,6 +106,7 @@ body {
   padding-left: 0;
   margin: 0;
   margin-top: 3px;
+  font-size: 0.7em;
 }
 .card .right-section .lower .block-contact ul .icon-circle {
   color: #EEF8FF;
@@ -123,13 +128,13 @@ body {
   margin: 10px;
 }
 .card .right-section .lower .block-skill .description-title {
-  font-size: 1.2em;
+  font-size: 1em;
   font-style: italic;
   text-align: center;
   color: #FFFCF9;
 }
 .card .right-section .lower .block-skill .description {
-  font-size: 0.9em;
+  font-size: 0.6em;
   color: #FFFCF9;
 }
 .card .left-section {
