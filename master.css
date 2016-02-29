@@ -3,6 +3,7 @@ body {
   font-family: 'Source Code Pro';
   min-height: 900px;
 }
+
 .container {
   margin: 30px;
   display: -webkit-flex;
@@ -42,21 +43,24 @@ body {
   justify-content: flex-start;
   margin-top: 5px;
 }
+.card .right-section .upper .photo-container {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
 .card .right-section .upper .photo {
   background-color: white;
-  width: 100%;
-  height: auto;
-  min-width: 100px;
-  min-height: auto;
   max-width: 200px;
   max-height: 200px;
-  border-radius: 1000px;
+  border-radius: 50%;
   z-index: 3;
   box-shadow: 0px 0px 10px #060E0C;
   border-color: #F4F0F5;
   border: 1px solid;
   margin: 0.5em;
-  margin-left: 7%;
 }
 .card .right-section .upper .photo-title {
   text-align: center;
@@ -75,9 +79,10 @@ body {
   background-color: #38423B;
 }
 .card .right-section .lower .block-about {
-  -webkit-flex: 2;
-  flex: 2;
+  -webkit-flex: 1.7;
+  flex: 1.7;
   margin: 10px;
+  overflow: hidden;
 }
 .card .right-section .lower .block-about .description-title {
   font-size: 1em;
@@ -86,13 +91,14 @@ body {
   color: #FFFCF9;
 }
 .card .right-section .lower .block-about .description {
-  font-size: 0.6em;
+  font-size: 0.8em;
   color: #FFFCF9;
 }
 .card .right-section .lower .block-contact {
-  -webkit-flex: 1;
-  flex: 1;
+  -webkit-flex: 1.8;
+  flex: 1.8;
   margin: 10px;
+  overflow: hidden;
 }
 .card .right-section .lower .block-contact .description-title {
   font-size: 1em;
@@ -106,10 +112,12 @@ body {
   padding-left: 0;
   margin: 0;
   margin-top: 3px;
-  font-size: 0.7em;
 }
 .card .right-section .lower .block-contact ul .icon-circle {
   color: #EEF8FF;
+}
+.card .right-section .lower .block-contact ul .contact-info {
+  font-size: 0.8em;
 }
 .card .right-section .lower .block-contact a {
   text-decoration: none;
@@ -126,6 +134,7 @@ body {
   -webkit-flex: 3;
   flex: 3;
   margin: 10px;
+  overflow: hidden;
 }
 .card .right-section .lower .block-skill .description-title {
   font-size: 1em;
@@ -133,10 +142,23 @@ body {
   text-align: center;
   color: #FFFCF9;
 }
-.card .right-section .lower .block-skill .description {
-  font-size: 0.6em;
+.card .right-section .lower .block-skill ul {
+  list-style-type: none;
   color: #FFFCF9;
+  padding-left: 0;
+  margin: 0;
+  margin-top: 3px;
 }
+.card .right-section .lower .block-skill ul .icon-circle {
+  color: #EEF8FF;
+}
+.card .right-section .lower .block-skill ul .skill-info {
+  font-size: 0.8em;
+}
+.card .right-section .lower .block-skill .icon-stack {
+  color: #3F5E5A;
+}
+
 .card .left-section {
   background-color: #F4F0F5;
   -webkit-flex: 2;
