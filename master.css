@@ -32,8 +32,8 @@ body {
   color: #3F5E5A;
 }
 .card .right-section .upper {
-  -webkit-flex: 1;
-  flex: 1;
+  -webkit-flex: 1.1;
+  flex: 1.1;
   display: -webkit-flex;
   display: flex;
   -webkit-flex-direction: column;
@@ -52,8 +52,8 @@ body {
 }
 .card .right-section .upper .photo {
   background-color: white;
-  max-width: 200px;
-  max-height: 200px;
+  max-width: 180px;
+  max-height: 180px;
   border-radius: 50%;
   z-index: 3;
   box-shadow: 0px 0px 10px #060E0C;
@@ -63,7 +63,34 @@ body {
 }
 .card .right-section .upper .photo-title {
   text-align: center;
-  font-size: 1.6em;
+  font-size: 1.2em;
+  color: #FFFBCF;
+}
+.card .right-section .upper .photo-description {
+  text-align: center;
+  font-size: 0.85em;
+  color: #FFFCF9;
+}
+.card .right-section .upper .pdf-link-container {
+  margin-top: 12px;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+}
+.card .right-section .upper .pdf-link-container a {
+  text-decoration: none;
+  text-align: center;
+  font-size: 0.8em;
+  color: #FFFCF9;
+  -webkit-transition: all .2s ease;
+  transition: all .2s ease;
+}
+.card .right-section .upper .pdf-link-container a:hover {
+  text-decoration: underline;
+  font-size: 0.9em;
   color: #FFFBCF;
 }
 .card .right-section .lower {
@@ -80,7 +107,7 @@ body {
 .card .right-section .lower .block-about {
   -webkit-flex: 1.7;
   flex: 1.7;
-  margin: 10px;
+  margin: 15px;
   overflow: hidden;
 }
 .card .right-section .lower .block-about .description-title {
@@ -96,7 +123,7 @@ body {
 .card .right-section .lower .block-contact {
   -webkit-flex: 1.8;
   flex: 1.8;
-  margin: 10px;
+  margin: 15px;
   overflow: hidden;
 }
 .card .right-section .lower .block-contact .description-title {
@@ -132,7 +159,7 @@ body {
 .card .right-section .lower .block-skill {
   -webkit-flex: 3;
   flex: 3;
-  margin: 10px;
+  margin: 15px;
   overflow: hidden;
 }
 .card .right-section .lower .block-skill .description-title {
