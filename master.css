@@ -1,9 +1,8 @@
 body {
-  background: linear-gradient(45deg, #3F5E5A, 60%, #F4F0F5);
+  background: radial-gradient(circle, #FFFBFA, #073B4C);
   font-family: 'Source Code Pro';
   min-height: 870px;
 }
-
 .container {
   margin: 30px;
   display: -webkit-flex;
@@ -158,7 +157,6 @@ body {
 .card .right-section .lower .block-skill .icon-stack {
   color: #3F5E5A;
 }
-
 .card .left-section {
   background-color: #F4F0F5;
   -webkit-flex: 2;
