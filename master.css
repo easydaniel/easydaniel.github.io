@@ -11,11 +11,20 @@ body {
 .card {
   background-color: #118AB2;
   box-shadow: 2px 3px 10px #111111;
-  -webkit-flex: 2;
-  flex: 2;
+  -webkit-flex: 6;
+  flex: 6;
   height: 850px;
   display: -webkit-flex;
   display: flex;
+  opacity: 0;
+  margin-top: 100px;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+.card.show {
+
+  margin-top: 0px;
+  opacity: 1;
 }
 .card .right-section {
   -webkit-flex: 1;
@@ -72,7 +81,7 @@ body {
   color: #FFFCF9;
 }
 .card .right-section .upper .pdf-link-container {
-  margin-top: 12px;
+  margin-top: 10px;
   display: -webkit-flex;
   display: flex;
   -webkit-flex-direction: column;
@@ -90,7 +99,6 @@ body {
 }
 .card .right-section .upper .pdf-link-container a:hover {
   text-decoration: underline;
-  font-size: 0.9em;
   color: #FFFBCF;
 }
 .card .right-section .lower {
