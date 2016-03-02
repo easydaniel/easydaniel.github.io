@@ -5,11 +5,9 @@ $(document).ready(function() {
 })
 
 $(window).on("load", function() {
+  $('.loader > div').addClass("stop");
+  $('.loader').fadeOut();
   setTimeout(function() {
-    $('.loader > div').addClass("stop");
-    $('.loader').fadeOut();
-    setTimeout(function() {
-      $('.card').fadeTo(500, 1);
-    }, 500);
-  }, 1000);
+    $('.card').fadeTo(500, 1);
+  }, 500);
 });
