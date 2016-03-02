@@ -14,5 +14,5 @@ $(window).on("load", function() {
         'margin-top': '0px'
       });
     }, 500);
-  }, 3000);
+  }, 1000);
 });
