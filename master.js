@@ -8,6 +8,9 @@ $(window).on("load", function() {
   $('.loader > div').addClass("stop");
   $('.loader').fadeOut();
   setTimeout(function() {
-    $('.card').fadeTo(500, 1);
+    $('.card').animate({
+      'opacity': 1,
+      'margin-top': '0px'
+    });
   }, 500);
 });
