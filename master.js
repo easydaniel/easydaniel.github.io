@@ -10,7 +10,7 @@ $(window).on("load", function() {
   setTimeout(function() {
     $('.card').animate({
       'opacity': 1,
-      'margin-top': '0px'
+      'margin-top': '2px'
     });
   }, 500);
 });
