@@ -4,20 +4,63 @@
 <head>
   <meta charset="utf-8">
   <title>Werewolves</title>
-  <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
-  <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" rel="stylesheet">
-  <script src="https://code.jquery.com/jquery-2.2.1.min.js" charset="utf-8"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js" charset="utf-8"></script>
-
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"
+    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+  <link async rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css" />
+  <script async src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+  <script async src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.14.1/lodash.min.js"></script>
 </head>
 
-<body>
-  <div class="container">
-    <div class="blank"></div>
+<body style="margin-top: 40px;">
+  <div class="ui raised very padded text container segment fluid">
+    <div class="ui form">
+      <div class="field">
+        <label>遊戲板子</label>
+        <select class="ui dropdown" id="board">
+          <option value="">請選擇板子</option>
+          <option value="狼,狼,民,預言家,女巫,獵人,守衛">7人局: 生還者</option>
+          <option value="惡靈騎士,白狼王,黑狼王,預言家,女巫,獵人,守衛,白痴">8人局: 諸神黃昏</option>
+          <option value="狼,狼,狼,民,民,民,預言家,女巫,獵人">9人局: 預女獵</option>
+          <option value="狼,狼,狼,民,民,民,民,預言家,女巫,獵人">10人局: 預女獵</option>
+          <option value="狼,狼,黑白狼王,民,民,民,預言家,女巫,獵人,騎士">10人局: 預女獵騎(黑白狼王)</option>
+          <option value="狼,白狼王,黑狼王,民,民,民,預言家,女巫,獵人,騎士">10人局: 預女獵騎(雙狼王)</option>
+          <option value="狼,狼,狼,狼,民,民,民,民,預言家,女巫,獵人,白痴">12人局: 預女獵白</option>
+          <option value="狼,狼,狼,狼,民,民,民,民,預言家,女巫,獵人,九尾妖狐">12人局: 預女獵狐</option>
+          <option value="狼,狼,狼,黑狼王,民,民,民,民,預言家,女巫,獵人,守衛">12人局: 狼槍守衛</option>
+          <option value="狼,狼,狼,夢魘,民,民,民,民,預言家,女巫,獵人,守衛">12人局: 夢魘守衛</option>
+          <option value="狼,狼,狼,惡魔,民,民,民,民,預言家,女巫,獵人,守衛">12人局: 惡魔守衛</option>
+          <option value="狼,狼,狼,惡靈騎士,民,民,民,民,預言家,女巫,獵人,守衛">12人局: 惡靈守衛</option>
+          <option value="狼,狼,狼,黑蝙蝠,民,民,民,民,預言家,女巫,獵人,守衛">12人局: 黑蝙蝠守衛</option>
+          <option value="狼,狼,狼兄,狼弟,民,民,民,民,預言家,女巫,獵人,守衛">12人局: 狼兄狼弟</option>
+          <option value="狼,狼,種狼,隱狼,民,民,民,民,預言家,女巫,獵人,守衛">12人局: 種狼隱狼</option>
+          <option value="狼,狼,狼,狼,混血兒,民,民,民,預言家,女巫,獵人,白痴">12人局: 預女獵白混</option>
+          <option value="狼,狼,狼,大灰狼,民,民,民,民,預言家,女巫,獵人,占卜師">12人局: 大灰狼占卜師</option>
+          <option value="狼,狼,狼,機械狼,民,民,民,民,通靈師,女巫,獵人,守衛">12人局: 機械狼通靈師</option>
+        </select>
+      </div>
+      <button class="ui button primary" onclick="gen()">發牌</button>
+    </div>
+  </div>
 
+  <div class="ui raised very padded text container segment fluid" style="margin-top: 40px;" id="result">
 
   </div>
+
+  <script>
+    $(document).ready(() => {
+      $('#board').dropdown();
+    });
+    function gen() {
+      var board = Array.from($('#board').dropdown('get value').split(',')).filter((v) => v.length);
+      if (board.length == 0) {
+        $('#result').html('<span>請選擇板子<span>')
+        return;
+      }
+
+      var result = _.shuffle(board).map((v, i) => `${String(i + 1).padStart(2, '0')} 號: ${v}`).join('<br>')
+      $('#result').html(`<span>${result}</span>`);
+    }
+  </script>
 </body>
 
 </html>
