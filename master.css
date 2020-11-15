@@ -1,7 +1,7 @@
 body {
   background: radial-gradient(circle, #FFFBFA, #073B4C) no-repeat;
   font-family: 'Source Code Pro';
-  height: 1200px;
+  height: auto;
 }
 .loader {
   position: absolute;
